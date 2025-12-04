@@ -85,7 +85,7 @@ def create_spark_session():
     return SparkSession.builder \
         .appName("TaxiSpeedLayer") \
         .master("local[*]") \
-        .config("spark.jars.packages", "org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0") \
+        .config("spark.jars.packages", "org.apache.spark:spark-sql-kafka-0-10_2.13:4.0.0") \
         .config("spark.sql.streaming.checkpointLocation", "data/checkpoint") \
         .config("spark.sql.shuffle.partitions", "2") \
         .getOrCreate()
@@ -128,8 +128,12 @@ def process_batch(batch_df, batch_id):
         pdf['predicted_duration'] = None
         pdf['prediction_error'] = None
     
-    pdf['processed_time'] = datetime.now()
+    pdf['processed_time'] = datetime.now().isoformat()
     pdf['batch_id'] = batch_id
+    
+    # Ensure proper types for Spark DataFrame creation
+    pdf['predicted_duration'] = pdf['predicted_duration'].astype(float)
+    pdf['prediction_error'] = pdf['prediction_error'].astype(float)
     
     # Write to speed layer output
     output_dir = "data/speed_layer"
@@ -146,7 +150,34 @@ def process_batch(batch_df, batch_id):
     
     # Create/update temporary table for real-time views
     spark = SparkSession.builder.getOrCreate()
-    spark_df = spark.createDataFrame(pdf)
+    
+    # Define explicit schema for the DataFrame
+    speed_layer_schema = StructType([
+        StructField("id", StringType(), True),
+        StructField("vendor_id", IntegerType(), True),
+        StructField("pickup_datetime", StringType(), True),
+        StructField("original_pickup_datetime", StringType(), True),
+        StructField("passenger_count", IntegerType(), True),
+        StructField("pickup_longitude", DoubleType(), True),
+        StructField("pickup_latitude", DoubleType(), True),
+        StructField("dropoff_longitude", DoubleType(), True),
+        StructField("dropoff_latitude", DoubleType(), True),
+        StructField("store_and_fwd_flag", StringType(), True),
+        StructField("trip_duration", IntegerType(), True),
+        StructField("hour", IntegerType(), True),
+        StructField("day_of_week", IntegerType(), True),
+        StructField("month", IntegerType(), True),
+        StructField("distance_km", DoubleType(), True),
+        StructField("predicted_duration", DoubleType(), True),
+        StructField("prediction_error", DoubleType(), True),
+        StructField("processed_time", StringType(), True),
+        StructField("batch_id", IntegerType(), True),
+    ])
+    
+    # Convert pandas timestamp to string for Spark compatibility
+    pdf['pickup_datetime'] = pdf['pickup_datetime'].astype(str)
+    
+    spark_df = spark.createDataFrame(pdf, schema=speed_layer_schema)
     spark_df.createOrReplaceTempView("speed_layer_trips")
     
     # Real-time aggregations (temporary table)

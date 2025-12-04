@@ -48,7 +48,10 @@ A complete Lambda Architecture implementation for NYC Taxi data processing and v
 
 ### 1. Machine Learning (Phase 1)
 - **File**: `train_model.py`
-- **Model**: RandomForest for trip duration prediction
+- **Training Data**: Full dataset (~1.4 million records from `train.csv`)
+- **Data Cleaning**: Removes outliers (trips < 1 min or > 2 hours)
+- **Models Trained**: RandomForest, GradientBoosting, DecisionTree, Ridge, Lasso, ElasticNet, KNeighbors, AdaBoost
+- **Best Model**: GradientBoosting (RMSE: 295.60s, R²: 0.7943)
 - **Output**: `model/taxi_model.pkl`
 
 ### 2. Streaming Ingestion (Phase 2)
@@ -98,6 +101,11 @@ pip install pandas scikit-learn numpy kafka-python streamlit pyspark fastavro py
 ```bash
 python train_model.py
 ```
+
+This trains on the full dataset (~1.4M records) and outputs:
+- Best model: GradientBoosting
+- RMSE: ~296 seconds (~5 minutes average error)
+- R² Score: 0.79 (explains 79% of variance)
 
 ### Step 3: Create Batch Layer Data
 
@@ -231,7 +239,7 @@ project-periscope/
 | Speed Layer | Apache Spark 3.5.0 / Python Consumer |
 | Batch Layer | Apache Hive 3.1.3 + Avro/Parquet |
 | Orchestration | Apache Airflow 2.7.3 |
-| ML | Scikit-learn (RandomForest) |
+| ML | Scikit-learn (GradientBoosting, R²=0.79) |
 | Visualization | Streamlit |
 | Database | PostgreSQL 13 (Hive Metastore) |
 | Infrastructure | Docker Compose |
