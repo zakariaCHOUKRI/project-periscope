@@ -16,7 +16,7 @@ import pyarrow.parquet as pq
 DATA_DIR = 'data'
 MASTER_DATA_PATH = f'{DATA_DIR}/avro'
 BATCH_VIEWS_PATH = f'{DATA_DIR}/parquet'
-RAW_DATA_FILE = f'{DATA_DIR}/taxi_subset.csv'
+RAW_DATA_FILE = f'{DATA_DIR}/train.csv'
 
 def haversine(lat1, lon1, lat2, lon2):
     """Calculate distance in km using Haversine formula."""

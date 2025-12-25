@@ -1,13 +1,13 @@
 {
   "experiment_name": "nyc-taxi-duration-prediction",
   "model_name": "taxi-duration-model",
-  "training_date": "2025-12-12T11:52:19.848861",
+  "training_date": "2025-12-25T19:36:48.676973",
   "best_model": "GradientBoosting",
   "metrics": {
     "best_model": "GradientBoosting",
-    "final_rmse": 295.60384958415506,
-    "final_mae": 188.57870639016792,
-    "final_r2": 0.7942678223059862
+    "final_rmse": 295.5102153620288,
+    "final_mae": 188.50426494249618,
+    "final_r2": 0.7943981353687426
   },
   "features": [
     "passenger_count",

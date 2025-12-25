@@ -236,9 +236,8 @@ project-periscope/
 │   ├── taxi_model.pkl      # Trained ML model
 │   └── experiment_metadata.json  # Submarine experiment metadata
 ├── data/
-│   ├── train.csv           # Full training data
+│   ├── train.csv           # Full training data (~1.4M records)
 │   ├── test.csv            # Test data
-│   ├── taxi_subset.csv     # Sample data (10k records)
 │   ├── avro/               # Master data (Avro)
 │   ├── parquet/            # Batch views (Parquet)
 │   └── speed_layer/        # Real-time data (JSON)
