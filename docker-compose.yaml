@@ -154,5 +154,58 @@ services:
       timeout: 10s
       retries: 5
 
+  # ============================================
+  # ML PLATFORM - Apache Submarine
+  # ============================================
+  submarine-database:
+    image: mysql:8.0
+    container_name: submarine-database
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: submarine
+      MYSQL_USER: submarine
+      MYSQL_PASSWORD: submarine
+    volumes:
+      - submarine_mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-ppassword"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  submarine-server:
+    image: apache/submarine:0.8.0
+    container_name: submarine-server
+    depends_on:
+      submarine-database:
+        condition: service_healthy
+    environment:
+      SUBMARINE_SERVER_DATABASE_URL: jdbc:mysql://submarine-database:3306/submarine?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&failOverReadOnly=false&useSSL=false&allowPublicKeyRetrieval=true
+      SUBMARINE_SERVER_DATABASE_USERNAME: submarine
+      SUBMARINE_SERVER_DATABASE_PASSWORD: submarine
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./model:/opt/submarine/model
+      - ./data:/opt/submarine/data
+    command: >
+      bash -c "
+        /opt/submarine/bin/submarine-daemon.sh start getMysqlJar &&
+        /opt/submarine/bin/submarine-daemon.sh start server
+      "
+
+  submarine-mlflow:
+    image: apache/submarine:0.8.0-mlflow
+    container_name: submarine-mlflow
+    depends_on:
+      - submarine-database
+    environment:
+      BACKEND_STORE_URI: mysql+pymysql://submarine:submarine@submarine-database:3306/submarine
+    ports:
+      - "5001:5000"
+    volumes:
+      - ./model:/mlflow/artifacts
+
 volumes:
   postgres_data:
+  submarine_mysql_data:

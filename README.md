@@ -1,6 +1,6 @@
 # Project Periscope - Lambda Architecture Implementation
 
-A complete Lambda Architecture implementation for NYC Taxi data processing and visualization using Apache Kafka, Apache Spark, Apache Hive, Apache Airflow, and Streamlit.
+A complete Lambda Architecture implementation for NYC Taxi data processing and visualization using Apache Kafka, Apache Spark, Apache Hive, Apache Airflow, Apache Submarine (ML), and Streamlit.
 
 ## Architecture Overview
 
@@ -42,17 +42,31 @@ A complete Lambda Architecture implementation for NYC Taxi data processing and v
 │   - ML Model Predictions & Error Analysis                                     │
 │   - Combined Lambda View                                                      │
 └──────────────────────────────────────────────────────────────────────────────┘
+
+                    ┌─────────────────────────────────────────────────────────┐
+                    │              APACHE SUBMARINE (ML Platform)              │
+                    │   - Experiment Tracking & Model Registry                 │
+                    │   - Distributed Training (PyTorch/TensorFlow)            │
+                    │   - Model Serving & Deployment                           │
+                    └─────────────────────────────────────────────────────────┘
 ```
 
 ## Components
 
-### 1. Machine Learning (Phase 1)
+### 1. Machine Learning with Apache Submarine (Phase 1)
 - **File**: `train_model.py`
 - **Training Data**: Full dataset (~1.4 million records from `train.csv`)
 - **Data Cleaning**: Removes outliers (trips < 1 min or > 2 hours)
-- **Models Trained**: RandomForest, GradientBoosting, DecisionTree, Ridge, Lasso, ElasticNet, KNeighbors, AdaBoost
-- **Best Model**: GradientBoosting (RMSE: 295.60s, R²: 0.7943)
-- **Output**: `model/taxi_model.pkl`
+- **ML Platform**: Apache Submarine for experiment tracking and model management
+- **Framework**: PyTorch Deep Neural Network for distributed training
+- **Features**:
+  - Submarine experiment tracking and logging
+  - Model registry integration
+  - Distributed training support (GPU/CPU)
+  - Baseline comparison with GradientBoosting
+- **Output**: 
+  - `model/taxi_model.pkl` - Trained model artifact
+  - `model/experiment_metadata.json` - Submarine experiment metadata
 
 ### 2. Streaming Ingestion (Phase 2)
 - **Kafka Producer**: `kafka_producer.py` - Streams taxi data to Kafka
@@ -93,7 +107,7 @@ A complete Lambda Architecture implementation for NYC Taxi data processing and v
 cd ~/project-periscope
 python3 -m venv .venv
 source .venv/bin/activate
-pip install pandas scikit-learn numpy kafka-python streamlit pyspark fastavro pyarrow
+pip install pandas scikit-learn numpy kafka-python streamlit pyspark fastavro pyarrow torch apache-submarine
 ```
 
 ### Step 2: Train the ML Model
@@ -102,10 +116,11 @@ pip install pandas scikit-learn numpy kafka-python streamlit pyspark fastavro py
 python train_model.py
 ```
 
-This trains on the full dataset (~1.4M records) and outputs:
-- Best model: GradientBoosting
-- RMSE: ~296 seconds (~5 minutes average error)
-- R² Score: 0.79 (explains 79% of variance)
+This uses Apache Submarine for experiment tracking and trains:
+- PyTorch Deep Neural Network (Submarine-compatible for distributed training)
+- GradientBoosting baseline for comparison
+- Logs metrics to Submarine experiment tracking
+- Registers model to Submarine Model Registry
 
 ### Step 3: Create Batch Layer Data
 
@@ -178,6 +193,7 @@ streamlit run app.py
 | **Streamlit Dashboard** | http://localhost:8501 | - |
 | **Airflow UI** | http://localhost:8081 | admin / admin |
 | **Spark Master UI** | http://localhost:8085 | - |
+| **Submarine UI** | http://localhost:8080 | - |
 | **Hive Server** | localhost:10000 | - |
 | **Kafka** | localhost:9092 | - |
 
@@ -209,7 +225,7 @@ rm -rf data/speed_layer/* data/avro/* data/parquet/*
 
 ```
 project-periscope/
-├── train_model.py          # ML model training
+├── train_model.py          # ML model training with Apache Submarine
 ├── kafka_producer.py       # Stream data to Kafka
 ├── kafka_consumer.py       # Speed layer with ML inference
 ├── spark_streaming.py      # Spark streaming processor
@@ -217,7 +233,8 @@ project-periscope/
 ├── app.py                  # Streamlit dashboard
 ├── docker-compose.yaml     # Infrastructure
 ├── model/
-│   └── taxi_model.pkl      # Trained ML model
+│   ├── taxi_model.pkl      # Trained ML model
+│   └── experiment_metadata.json  # Submarine experiment metadata
 ├── data/
 │   ├── train.csv           # Full training data
 │   ├── test.csv            # Test data
@@ -239,7 +256,8 @@ project-periscope/
 | Speed Layer | Apache Spark 3.5.0 / Python Consumer |
 | Batch Layer | Apache Hive 3.1.3 + Avro/Parquet |
 | Orchestration | Apache Airflow 2.7.3 |
-| ML | Scikit-learn (GradientBoosting, R²=0.79) |
+| ML Platform | Apache Submarine (Experiment Tracking, Model Registry) |
+| ML Framework | PyTorch (Deep Neural Network) |
 | Visualization | Streamlit |
 | Database | PostgreSQL 13 (Hive Metastore) |
 | Infrastructure | Docker Compose |
