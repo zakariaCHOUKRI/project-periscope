@@ -1,0 +1,17 @@
+[2025-12-30T18:30:35.330+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: lambda_architecture_pipeline.data_validation.data_profiling scheduled__2025-12-29T00:00:00+00:00 [queued]>
+[2025-12-30T18:30:35.351+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: lambda_architecture_pipeline.data_validation.data_profiling scheduled__2025-12-29T00:00:00+00:00 [queued]>
+[2025-12-30T18:30:35.352+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 3
+[2025-12-30T18:30:35.604+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): data_validation.data_profiling> on 2025-12-29 00:00:00+00:00
+[2025-12-30T18:30:35.612+0000] {standard_task_runner.py:57} INFO - Started process 822 to run task
+[2025-12-30T18:30:35.619+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'lambda_architecture_pipeline', 'data_validation.data_profiling', 'scheduled__2025-12-29T00:00:00+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/lambda_architecture_pipeline_dag.py', '--cfg-path', '/tmp/tmp49ntkqfv']
+[2025-12-30T18:30:35.625+0000] {standard_task_runner.py:85} INFO - Job 14: Subtask data_validation.data_profiling
+[2025-12-30T18:30:35.770+0000] {task_command.py:416} INFO - Running <TaskInstance: lambda_architecture_pipeline.data_validation.data_profiling scheduled__2025-12-29T00:00:00+00:00 [running]> on host 5cb0b3f8f092
+[2025-12-30T18:30:35.909+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='alerts@example.com' AIRFLOW_CTX_DAG_OWNER='lambda-architecture' AIRFLOW_CTX_DAG_ID='lambda_architecture_pipeline' AIRFLOW_CTX_TASK_ID='data_validation.data_profiling' AIRFLOW_CTX_EXECUTION_DATE='2025-12-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-12-29T00:00:00+00:00'
+[2025-12-30T18:30:47.984+0000] {logging_mixin.py:154} INFO - ✓ Data profiling complete:
+[2025-12-30T18:30:47.985+0000] {logging_mixin.py:154} INFO -   - Total records: 1,458,644
+[2025-12-30T18:30:47.985+0000] {logging_mixin.py:154} INFO -   - Memory usage: 367.24 MB
+[2025-12-30T18:30:47.985+0000] {logging_mixin.py:154} INFO -   - Outliers: 0.74%
+[2025-12-30T18:30:48.079+0000] {python.py:194} INFO - Done. Returned value was: {'basic_stats': {'total_records': 1458644, 'memory_usage_mb': 367.2429504394531, 'date_range': {'min': '2016-01-01T00:00:17', 'max': '2016-06-30T23:59:39'}}, 'trip_duration': {'mean': 959.4922729603659, 'median': 662.0, 'std': 5237.431724497621, 'min': 1, 'max': 3526282, 'outliers_pct': 0.7437044268512399}, 'vendor_distribution': {2: 780302, 1: 678342}, 'passenger_distribution': {1: 1033540, 2: 210318, 5: 78088, 3: 59896, 6: 48333, 4: 28404, 0: 60, 7: 3, 9: 1, 8: 1}, 'hourly_distribution': {0: 53248, 1: 38571, 2: 27972, 3: 20895, 4: 15792, 5: 15002, 6: 33248, 7: 55600, 8: 67053, 9: 67663, 10: 65437, 11: 68476, 12: 71873, 13: 71473, 14: 74292, 15: 71811, 16: 64313, 17: 76483, 18: 90600, 19: 90308, 20: 84072, 21: 84185, 22: 80492, 23: 69785}}
+[2025-12-30T18:30:48.105+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=lambda_architecture_pipeline, task_id=data_validation.data_profiling, execution_date=20251229T000000, start_date=20251230T183035, end_date=20251230T183048
+[2025-12-30T18:30:48.145+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-12-30T18:30:48.203+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check

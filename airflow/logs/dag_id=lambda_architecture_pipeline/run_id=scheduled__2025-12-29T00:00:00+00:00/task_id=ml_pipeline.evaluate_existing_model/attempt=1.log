@@ -1,0 +1,22 @@
+[2025-12-30T18:35:00.932+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: lambda_architecture_pipeline.ml_pipeline.evaluate_existing_model scheduled__2025-12-29T00:00:00+00:00 [queued]>
+[2025-12-30T18:35:00.948+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: lambda_architecture_pipeline.ml_pipeline.evaluate_existing_model scheduled__2025-12-29T00:00:00+00:00 [queued]>
+[2025-12-30T18:35:00.948+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 3
+[2025-12-30T18:35:01.156+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): ml_pipeline.evaluate_existing_model> on 2025-12-29 00:00:00+00:00
+[2025-12-30T18:35:01.165+0000] {standard_task_runner.py:57} INFO - Started process 1084 to run task
+[2025-12-30T18:35:01.168+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'lambda_architecture_pipeline', 'ml_pipeline.evaluate_existing_model', 'scheduled__2025-12-29T00:00:00+00:00', '--job-id', '26', '--raw', '--subdir', 'DAGS_FOLDER/lambda_architecture_pipeline_dag.py', '--cfg-path', '/tmp/tmpc0f7jgbh']
+[2025-12-30T18:35:01.171+0000] {standard_task_runner.py:85} INFO - Job 26: Subtask ml_pipeline.evaluate_existing_model
+[2025-12-30T18:35:01.227+0000] {task_command.py:416} INFO - Running <TaskInstance: lambda_architecture_pipeline.ml_pipeline.evaluate_existing_model scheduled__2025-12-29T00:00:00+00:00 [running]> on host 5cb0b3f8f092
+[2025-12-30T18:35:01.308+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='alerts@example.com' AIRFLOW_CTX_DAG_OWNER='lambda-architecture' AIRFLOW_CTX_DAG_ID='lambda_architecture_pipeline' AIRFLOW_CTX_TASK_ID='ml_pipeline.evaluate_existing_model' AIRFLOW_CTX_EXECUTION_DATE='2025-12-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-12-29T00:00:00+00:00'
+[2025-12-30T18:35:01.311+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/lambda_architecture_pipeline_dag.py", line 683, in evaluate_existing_model
+    from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
+ModuleNotFoundError: No module named 'sklearn'
+[2025-12-30T18:35:01.322+0000] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=lambda_architecture_pipeline, task_id=ml_pipeline.evaluate_existing_model, execution_date=20251229T000000, start_date=20251230T183500, end_date=20251230T183501
+[2025-12-30T18:35:01.337+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 26 for task ml_pipeline.evaluate_existing_model (No module named 'sklearn'; 1084)
+[2025-12-30T18:35:01.382+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-12-30T18:35:01.413+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

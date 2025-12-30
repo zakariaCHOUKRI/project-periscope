@@ -152,47 +152,40 @@ docker-compose ps
 
 All services should show as "Up" or "healthy".
 
-## Running the Pipeline
+### Step 6: Run the Streaming Pipeline
 
-### Option A: Simple Pipeline (Recommended for Testing)
+Open 3 terminal windows and run:
 
-**Terminal 1 - Start the Consumer:**
+**Terminal 1 - Speed Layer (Spark Streaming with ML):**
 ```bash
-source .venv/bin/activate
-python kafka_consumer.py
-```
-
-**Terminal 2 - Start the Producer:**
-```bash
-source .venv/bin/activate
-python kafka_producer.py
-```
-
-**Terminal 3 - Start the Dashboard:**
-```bash
-source .venv/bin/activate
-streamlit run app.py
-```
-
-### Option B: Full Spark Streaming Pipeline
-
-**Terminal 1 - Start Spark Streaming:**
-```bash
+cd ~/project-periscope
 source .venv/bin/activate
 python spark_streaming.py
 ```
 
-**Terminal 2 - Start the Producer:**
+**Terminal 2 - Data Producer (Streams to Kafka):**
 ```bash
+cd ~/project-periscope
 source .venv/bin/activate
 python kafka_producer.py
 ```
 
-**Terminal 3 - Start the Dashboard:**
+**Terminal 3 - Dashboard (Serving Layer):**
 ```bash
+cd ~/project-periscope
 source .venv/bin/activate
 streamlit run app.py
 ```
+
+### Step 7: Trigger the Lambda Architecture Pipeline (Optional)
+
+The main Airflow DAG runs daily, but you can trigger it manually:
+
+1. Open Airflow UI: http://localhost:8081 (admin / admin)
+2. Find `lambda_architecture_pipeline` DAG
+3. Click the play button to trigger manually
+
+This will run the full pipeline: data validation → batch processing → ML training → reconciliation.
 
 ## Accessing the Services
 
@@ -229,6 +222,119 @@ docker-compose down -v
 rm -rf data/speed_layer/* data/avro/* data/parquet/*
 ```
 
+## Airflow DAGs - Pipeline Orchestration
+
+The project includes **4 comprehensive Airflow DAGs** that orchestrate the entire Lambda Architecture:
+
+### 1. Lambda Architecture Pipeline (`lambda_architecture_pipeline_dag.py`) ⭐
+**The main production DAG with 20+ tasks organized in 5 TaskGroups:**
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                        LAMBDA ARCHITECTURE PIPELINE                          │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│  ┌─────────────────┐    ┌─────────────────────────────────────────────┐     │
+│  │  DATA VALIDATION │    │              BATCH LAYER                    │     │
+│  │  ───────────────│    │  ─────────────────────────────────────────  │     │
+│  │  • validate_raw │───▶│  • clean_and_transform                      │     │
+│  │  • quality_gate │    │  • create_master_data (Avro)                │     │
+│  │  • data_profiling│    │  ├─▶ hourly_stats_view ─────┐              │     │
+│  │  • detect_anomalies│   │  ├─▶ daily_summary_view ───┤              │     │
+│  └─────────────────┘    │  ├─▶ vendor_stats_view ─────┼─▶ batch_done │     │
+│                         │  ├─▶ geographic_stats_view ─┤              │     │
+│                         │  └─▶ temporal_patterns_view ┘              │     │
+│                         └─────────────────────────────────────────────┘     │
+│                                        │                                     │
+│           ┌────────────────────────────┴────────────────────────────┐       │
+│           ▼                                                          ▼       │
+│  ┌─────────────────┐                                      ┌─────────────────┐│
+│  │   ML PIPELINE   │                                      │   SPEED LAYER   ││
+│  │  ───────────────│                                      │  ───────────────││
+│  │  • check_model  │                                      │  • initialize   ││
+│  │  ├─▶ train_model│                                      │  • verify_kafka ││
+│  │  └─▶ evaluate   │                                      └─────────────────┘│
+│  │  • performance_ │                                              │          │
+│  │    gate         │                                              │          │
+│  └─────────────────┘                                              │          │
+│           │                                                        │          │
+│           └────────────────────────┬───────────────────────────────┘          │
+│                                    ▼                                          │
+│                         ┌─────────────────┐                                   │
+│                         │  SERVING LAYER  │                                   │
+│                         │  ───────────────│                                   │
+│                         │  • reconcile_   │                                   │
+│                         │    layers       │                                   │
+│                         │  • generate_    │                                   │
+│                         │    report       │                                   │
+│                         │  • send_        │                                   │
+│                         │    notification │                                   │
+│                         └─────────────────┘                                   │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+**Features:**
+- **TaskGroups** for logical organization
+- **BranchPythonOperator** for conditional model training vs evaluation
+- **ShortCircuitOperator** for quality gates (fails pipeline on bad data)
+- **Parallel execution** of 5 batch views simultaneously
+- **XCom** for passing data between tasks
+- **Comprehensive reporting** and notifications
+
+### 2. Streaming Pipeline Monitor (`streaming_pipeline_monitor_dag.py`) ⭐
+**Real-time monitoring DAG running every 5 minutes:**
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                      STREAMING PIPELINE MONITOR                              │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│  ┌─────────────────┐         ┌─────────────────┐                            │
+│  │ KAFKA MONITORING│         │ SPEED LAYER MON │                            │
+│  │  • broker_health│         │  • freshness    │                            │
+│  │  • topic_health │         │  • throughput   │                            │
+│  │  • consumer_lag │         │  • quality      │                            │
+│  └────────┬────────┘         └────────┬────────┘                            │
+│           │                           │                                      │
+│           └───────────┬───────────────┘                                      │
+│                       ▼                                                      │
+│           ┌─────────────────┐                                               │
+│           │ PIPELINE CONTROL│                                               │
+│           │  • check_producer│                                              │
+│           │  • dashboard_data│                                              │
+│           └────────┬────────┘                                               │
+│                    ▼                                                         │
+│           ┌─────────────────┐                                               │
+│           │ CIRCUIT BREAKER │                                               │
+│           │  • evaluate     │                                               │
+│           └────────┬────────┘                                               │
+│                    │                                                         │
+│        ┌───────────┴───────────┐                                            │
+│        ▼                       ▼                                            │
+│  ┌───────────┐          ┌───────────┐                                       │
+│  │SEND ALERT │          │LOG HEALTHY│                                       │
+│  └───────────┘          └───────────┘                                       │
+│                    │                                                         │
+│                    ▼                                                         │
+│           ┌─────────────────┐                                               │
+│           │    CLEANUP      │                                               │
+│           └─────────────────┘                                               │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+**Features:**
+- **Circuit breaker pattern** for automatic alerting
+- **Kafka health monitoring** (brokers, topics, consumer lag)
+- **Speed layer metrics** (freshness, throughput, quality)
+- **Dashboard data generation** for operational visibility
+- **Auto-cleanup** of old metrics files
+
+### 3. Taxi API Simulation (`taxi_api_simulation_dag.py`)
+Simulates real-time API by streaming data to Kafka every 5 minutes.
+
+### 4. Taxi Batch Processing (`taxi_batch_processing_dag.py`)
+Basic batch processing: Avro ingestion → Parquet views.
+
 ## File Structure
 
 ```
@@ -248,11 +354,15 @@ project-periscope/
 │   ├── test.csv            # Test data
 │   ├── avro/               # Master data (Avro)
 │   ├── parquet/            # Batch views (Parquet)
-│   └── speed_layer/        # Real-time data (JSON)
+│   ├── speed_layer/        # Real-time data (JSON)
+│   ├── metrics/            # Streaming metrics (from monitor DAG)
+│   └── reports/            # Pipeline reports (from lambda DAG)
 └── airflow/
     └── dags/
-        ├── taxi_api_simulation_dag.py
-        └── taxi_batch_processing_dag.py
+        ├── lambda_architecture_pipeline_dag.py  # ⭐ Main pipeline (20+ tasks)
+        ├── streaming_pipeline_monitor_dag.py    # ⭐ Real-time monitoring
+        ├── taxi_api_simulation_dag.py           # API simulation
+        └── taxi_batch_processing_dag.py         # Basic batch processing
 ```
 
 ## Technologies Used

@@ -1,0 +1,22 @@
+[2025-12-30T18:35:15.963+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: streaming_pipeline_monitor.kafka_monitoring.broker_health scheduled__2025-12-30T18:30:00+00:00 [queued]>
+[2025-12-30T18:35:15.979+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: streaming_pipeline_monitor.kafka_monitoring.broker_health scheduled__2025-12-30T18:30:00+00:00 [queued]>
+[2025-12-30T18:35:15.980+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2025-12-30T18:35:16.021+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): kafka_monitoring.broker_health> on 2025-12-30 18:30:00+00:00
+[2025-12-30T18:35:16.027+0000] {standard_task_runner.py:57} INFO - Started process 1096 to run task
+[2025-12-30T18:35:16.033+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'streaming_pipeline_monitor', 'kafka_monitoring.broker_health', 'scheduled__2025-12-30T18:30:00+00:00', '--job-id', '27', '--raw', '--subdir', 'DAGS_FOLDER/streaming_pipeline_monitor_dag.py', '--cfg-path', '/tmp/tmp2q2bjmkt']
+[2025-12-30T18:35:16.037+0000] {standard_task_runner.py:85} INFO - Job 27: Subtask kafka_monitoring.broker_health
+[2025-12-30T18:35:16.119+0000] {task_command.py:416} INFO - Running <TaskInstance: streaming_pipeline_monitor.kafka_monitoring.broker_health scheduled__2025-12-30T18:30:00+00:00 [running]> on host 5cb0b3f8f092
+[2025-12-30T18:35:16.235+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='streaming-alerts@example.com' AIRFLOW_CTX_DAG_OWNER='streaming-ops' AIRFLOW_CTX_DAG_ID='streaming_pipeline_monitor' AIRFLOW_CTX_TASK_ID='kafka_monitoring.broker_health' AIRFLOW_CTX_EXECUTION_DATE='2025-12-30T18:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-12-30T18:30:00+00:00'
+[2025-12-30T18:35:16.398+0000] {conn.py:400} INFO - <BrokerConnection client_id=airflow-health-check, node_id=bootstrap-0 host=kafka:29092 <connecting> [IPv4 ('172.18.0.6', 29092)]>: connecting to kafka:29092 [('172.18.0.6', 29092) IPv4]
+[2025-12-30T18:35:16.406+0000] {conn.py:622} INFO - <BrokerConnection client_id=airflow-health-check, node_id=bootstrap-0 host=kafka:29092 <checking_api_versions_recv> [IPv4 ('172.18.0.6', 29092)]>: Broker version identified as 2.6
+[2025-12-30T18:35:16.407+0000] {conn.py:461} INFO - <BrokerConnection client_id=airflow-health-check, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.6', 29092)]>: Connection complete.
+[2025-12-30T18:35:16.413+0000] {conn.py:400} INFO - <BrokerConnection client_id=airflow-health-check, node_id=1 host=kafka:29092 <connecting> [IPv4 ('172.18.0.6', 29092)]>: connecting to kafka:29092 [('172.18.0.6', 29092) IPv4]
+[2025-12-30T18:35:16.414+0000] {conn.py:461} INFO - <BrokerConnection client_id=airflow-health-check, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.18.0.6', 29092)]>: Connection complete.
+[2025-12-30T18:35:16.415+0000] {conn.py:951} INFO - <BrokerConnection client_id=airflow-health-check, node_id=bootstrap-0 host=kafka:29092 <connected> [IPv4 ('172.18.0.6', 29092)]>: Closing connection. 
+[2025-12-30T18:35:16.670+0000] {conn.py:951} INFO - <BrokerConnection client_id=airflow-health-check, node_id=1 host=kafka:29092 <connected> [IPv4 ('172.18.0.6', 29092)]>: Closing connection. 
+[2025-12-30T18:35:16.671+0000] {logging_mixin.py:154} INFO - ✓ Kafka broker healthy
+[2025-12-30T18:35:16.671+0000] {logging_mixin.py:154} INFO -   - Topics: []
+[2025-12-30T18:35:16.696+0000] {python.py:194} INFO - Done. Returned value was: {'timestamp': '2025-12-30T18:35:16.237317', 'broker_status': 'connected', 'topics': [], 'partitions': {}, 'is_healthy': True}
+[2025-12-30T18:35:16.733+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=streaming_pipeline_monitor, task_id=kafka_monitoring.broker_health, execution_date=20251230T183000, start_date=20251230T183515, end_date=20251230T183516
+[2025-12-30T18:35:16.770+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-12-30T18:35:16.821+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,16 @@
+[2025-12-30T18:30:32.676+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: lambda_architecture_pipeline.data_validation.quality_gate scheduled__2025-12-29T00:00:00+00:00 [queued]>
+[2025-12-30T18:30:32.694+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: lambda_architecture_pipeline.data_validation.quality_gate scheduled__2025-12-29T00:00:00+00:00 [queued]>
+[2025-12-30T18:30:32.694+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 3
+[2025-12-30T18:30:32.718+0000] {taskinstance.py:1382} INFO - Executing <Task(ShortCircuitOperator): data_validation.quality_gate> on 2025-12-29 00:00:00+00:00
+[2025-12-30T18:30:32.729+0000] {standard_task_runner.py:57} INFO - Started process 816 to run task
+[2025-12-30T18:30:32.734+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'lambda_architecture_pipeline', 'data_validation.quality_gate', 'scheduled__2025-12-29T00:00:00+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/lambda_architecture_pipeline_dag.py', '--cfg-path', '/tmp/tmp4hrlzj23']
+[2025-12-30T18:30:32.738+0000] {standard_task_runner.py:85} INFO - Job 12: Subtask data_validation.quality_gate
+[2025-12-30T18:30:33.260+0000] {task_command.py:416} INFO - Running <TaskInstance: lambda_architecture_pipeline.data_validation.quality_gate scheduled__2025-12-29T00:00:00+00:00 [running]> on host 5cb0b3f8f092
+[2025-12-30T18:30:33.408+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='alerts@example.com' AIRFLOW_CTX_DAG_OWNER='lambda-architecture' AIRFLOW_CTX_DAG_ID='lambda_architecture_pipeline' AIRFLOW_CTX_TASK_ID='data_validation.quality_gate' AIRFLOW_CTX_EXECUTION_DATE='2025-12-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-12-29T00:00:00+00:00'
+[2025-12-30T18:30:33.426+0000] {logging_mixin.py:154} INFO - ✓ Quality check PASSED: 100.00% >= 95.00%
+[2025-12-30T18:30:33.427+0000] {python.py:194} INFO - Done. Returned value was: True
+[2025-12-30T18:30:33.428+0000] {python.py:264} INFO - Condition result is True
+[2025-12-30T18:30:33.428+0000] {python.py:267} INFO - Proceeding with downstream tasks...
+[2025-12-30T18:30:33.467+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=lambda_architecture_pipeline, task_id=data_validation.quality_gate, execution_date=20251229T000000, start_date=20251230T183032, end_date=20251230T183033
+[2025-12-30T18:30:33.548+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-12-30T18:30:34.037+0000] {taskinstance.py:2778} INFO - 2 downstream tasks scheduled from follow-on schedule check

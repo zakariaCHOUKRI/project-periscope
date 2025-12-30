@@ -1,0 +1,16 @@
+[2025-12-30T18:30:14.801+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: lambda_architecture_pipeline.data_validation.validate_raw_data scheduled__2025-12-29T00:00:00+00:00 [queued]>
+[2025-12-30T18:30:14.812+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: lambda_architecture_pipeline.data_validation.validate_raw_data scheduled__2025-12-29T00:00:00+00:00 [queued]>
+[2025-12-30T18:30:14.812+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 3
+[2025-12-30T18:30:14.830+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): data_validation.validate_raw_data> on 2025-12-29 00:00:00+00:00
+[2025-12-30T18:30:14.838+0000] {standard_task_runner.py:57} INFO - Started process 802 to run task
+[2025-12-30T18:30:14.841+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'lambda_architecture_pipeline', 'data_validation.validate_raw_data', 'scheduled__2025-12-29T00:00:00+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/lambda_architecture_pipeline_dag.py', '--cfg-path', '/tmp/tmpktifu3jy']
+[2025-12-30T18:30:14.845+0000] {standard_task_runner.py:85} INFO - Job 10: Subtask data_validation.validate_raw_data
+[2025-12-30T18:30:15.079+0000] {task_command.py:416} INFO - Running <TaskInstance: lambda_architecture_pipeline.data_validation.validate_raw_data scheduled__2025-12-29T00:00:00+00:00 [running]> on host 5cb0b3f8f092
+[2025-12-30T18:30:15.165+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='alerts@example.com' AIRFLOW_CTX_DAG_OWNER='lambda-architecture' AIRFLOW_CTX_DAG_ID='lambda_architecture_pipeline' AIRFLOW_CTX_TASK_ID='data_validation.validate_raw_data' AIRFLOW_CTX_EXECUTION_DATE='2025-12-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-12-29T00:00:00+00:00'
+[2025-12-30T18:30:30.195+0000] {logging_mixin.py:154} INFO - ✓ Validation complete:
+[2025-12-30T18:30:30.195+0000] {logging_mixin.py:154} INFO -   - Rows: 1,458,644
+[2025-12-30T18:30:30.195+0000] {logging_mixin.py:154} INFO -   - Quality Score: 100.00%
+[2025-12-30T18:30:30.335+0000] {python.py:194} INFO - Done. Returned value was: {'file_exists': True, 'row_count': 1458644, 'schema_valid': True, 'null_percentage': {'id': 0.0, 'vendor_id': 0.0, 'pickup_datetime': 0.0, 'passenger_count': 0.0, 'pickup_longitude': 0.0, 'pickup_latitude': 0.0, 'dropoff_longitude': 0.0, 'dropoff_latitude': 0.0, 'trip_duration': 0.0}, 'quality_score': 1.0, 'validation_timestamp': '2025-12-30T18:30:15.166537'}
+[2025-12-30T18:30:30.400+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=lambda_architecture_pipeline, task_id=data_validation.validate_raw_data, execution_date=20251229T000000, start_date=20251230T183014, end_date=20251230T183030
+[2025-12-30T18:30:30.479+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-12-30T18:30:30.582+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -13,7 +13,7 @@ import sys
 
 KAFKA_BOOTSTRAP_SERVERS = ['localhost:9092']
 KAFKA_TOPIC = 'nyc-taxi-stream'
-DATA_FILE = 'data/taxi_subset.csv'
+DATA_FILE = 'data/train.csv'
 
 def wait_for_kafka(max_retries=30, retry_interval=2):
     """Wait for Kafka to be available."""

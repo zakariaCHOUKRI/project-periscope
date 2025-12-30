@@ -1,0 +1,16 @@
+[2025-12-30T18:34:20.715+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: lambda_architecture_pipeline.batch_layer.hourly_stats_view scheduled__2025-12-29T00:00:00+00:00 [queued]>
+[2025-12-30T18:34:20.727+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: lambda_architecture_pipeline.batch_layer.hourly_stats_view scheduled__2025-12-29T00:00:00+00:00 [queued]>
+[2025-12-30T18:34:20.735+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 3
+[2025-12-30T18:34:20.776+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): batch_layer.hourly_stats_view> on 2025-12-29 00:00:00+00:00
+[2025-12-30T18:34:20.783+0000] {standard_task_runner.py:57} INFO - Started process 1034 to run task
+[2025-12-30T18:34:20.809+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'lambda_architecture_pipeline', 'batch_layer.hourly_stats_view', 'scheduled__2025-12-29T00:00:00+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/lambda_architecture_pipeline_dag.py', '--cfg-path', '/tmp/tmpay1tj0n7']
+[2025-12-30T18:34:20.812+0000] {standard_task_runner.py:85} INFO - Job 18: Subtask batch_layer.hourly_stats_view
+[2025-12-30T18:34:21.172+0000] {task_command.py:416} INFO - Running <TaskInstance: lambda_architecture_pipeline.batch_layer.hourly_stats_view scheduled__2025-12-29T00:00:00+00:00 [running]> on host 5cb0b3f8f092
+[2025-12-30T18:34:21.364+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='alerts@example.com' AIRFLOW_CTX_DAG_OWNER='lambda-architecture' AIRFLOW_CTX_DAG_ID='lambda_architecture_pipeline' AIRFLOW_CTX_TASK_ID='batch_layer.hourly_stats_view' AIRFLOW_CTX_EXECUTION_DATE='2025-12-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-12-29T00:00:00+00:00'
+[2025-12-30T18:34:21.485+0000] {logging_mixin.py:154} WARNING - /home/airflow/.local/lib/python3.10/site-packages/airflow/utils/context.py:314 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2025-12-30T18:34:51.067+0000] {logging_mixin.py:154} WARNING - /home/airflow/.local/lib/python3.10/site-packages/pyarrow/pandas_compat.py:373 FutureWarning: is_sparse is deprecated and will be removed in a future version. Check `isinstance(dtype, pd.SparseDtype)` instead.
+[2025-12-30T18:34:51.193+0000] {logging_mixin.py:154} INFO - ✓ Created hourly_stats view: /opt/airflow/data/parquet/hourly_stats_20251229.parquet
+[2025-12-30T18:34:51.491+0000] {python.py:194} INFO - Done. Returned value was: /opt/airflow/data/parquet/hourly_stats_20251229.parquet
+[2025-12-30T18:34:51.653+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=lambda_architecture_pipeline, task_id=batch_layer.hourly_stats_view, execution_date=20251229T000000, start_date=20251230T183420, end_date=20251230T183451
+[2025-12-30T18:34:51.795+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-12-30T18:34:51.865+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

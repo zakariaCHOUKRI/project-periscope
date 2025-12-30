@@ -1,0 +1,17 @@
+[2025-12-30T18:40:07.777+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: streaming_pipeline_monitor.circuit_breaker.evaluate scheduled__2025-12-30T18:35:00+00:00 [queued]>
+[2025-12-30T18:40:07.793+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: streaming_pipeline_monitor.circuit_breaker.evaluate scheduled__2025-12-30T18:35:00+00:00 [queued]>
+[2025-12-30T18:40:07.793+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2025-12-30T18:40:07.807+0000] {taskinstance.py:1382} INFO - Executing <Task(BranchPythonOperator): circuit_breaker.evaluate> on 2025-12-30 18:35:00+00:00
+[2025-12-30T18:40:07.810+0000] {standard_task_runner.py:57} INFO - Started process 307 to run task
+[2025-12-30T18:40:07.812+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'streaming_pipeline_monitor', 'circuit_breaker.evaluate', 'scheduled__2025-12-30T18:35:00+00:00', '--job-id', '50', '--raw', '--subdir', 'DAGS_FOLDER/streaming_pipeline_monitor_dag.py', '--cfg-path', '/tmp/tmpnorlgntn']
+[2025-12-30T18:40:07.814+0000] {standard_task_runner.py:85} INFO - Job 50: Subtask circuit_breaker.evaluate
+[2025-12-30T18:40:07.855+0000] {task_command.py:416} INFO - Running <TaskInstance: streaming_pipeline_monitor.circuit_breaker.evaluate scheduled__2025-12-30T18:35:00+00:00 [running]> on host 7f437fd3c4aa
+[2025-12-30T18:40:07.928+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='streaming-alerts@example.com' AIRFLOW_CTX_DAG_OWNER='streaming-ops' AIRFLOW_CTX_DAG_ID='streaming_pipeline_monitor' AIRFLOW_CTX_TASK_ID='circuit_breaker.evaluate' AIRFLOW_CTX_EXECUTION_DATE='2025-12-30T18:35:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-12-30T18:35:00+00:00'
+[2025-12-30T18:40:07.975+0000] {logging_mixin.py:154} INFO - ✗ Failed checks: ['topic_healthy', 'throughput_ok', 'quality_ok']
+[2025-12-30T18:40:07.975+0000] {python.py:194} INFO - Done. Returned value was: alerting.send_alert
+[2025-12-30T18:40:07.975+0000] {python.py:227} INFO - Branch callable return alerting.send_alert
+[2025-12-30T18:40:07.976+0000] {skipmixin.py:173} INFO - Following branch alerting.send_alert
+[2025-12-30T18:40:07.990+0000] {skipmixin.py:239} INFO - Skipping tasks [('alerting.log_healthy_status', -1)]
+[2025-12-30T18:40:08.028+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=streaming_pipeline_monitor, task_id=circuit_breaker.evaluate, execution_date=20251230T183500, start_date=20251230T184007, end_date=20251230T184008
+[2025-12-30T18:40:08.066+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-12-30T18:40:08.096+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check

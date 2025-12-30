@@ -85,7 +85,7 @@ def create_spark_session():
     return SparkSession.builder \
         .appName("TaxiSpeedLayer") \
         .master("local[*]") \
-        .config("spark.jars.packages", "org.apache.spark:spark-sql-kafka-0-10_2.13:4.0.0") \
+        .config("spark.jars.packages", "org.apache.spark:spark-sql-kafka-0-10_2.13:4.1.0") \
         .config("spark.sql.streaming.checkpointLocation", "data/checkpoint") \
         .config("spark.sql.shuffle.partitions", "2") \
         .getOrCreate()
