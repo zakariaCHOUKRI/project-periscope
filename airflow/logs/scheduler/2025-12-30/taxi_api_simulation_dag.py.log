@@ -1,0 +1,95 @@
+[2025-12-30T18:15:11.199+0000] {processor.py:157} INFO - Started process (PID=181) to work on /opt/airflow/dags/taxi_api_simulation_dag.py
+[2025-12-30T18:15:11.202+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/taxi_api_simulation_dag.py for tasks to queue
+[2025-12-30T18:15:11.204+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:15:11.203+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/taxi_api_simulation_dag.py
+[2025-12-30T18:15:14.425+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_api_simulation']) retrieved from /opt/airflow/dags/taxi_api_simulation_dag.py
+[2025-12-30T18:15:14.824+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:15:14.824+0000] {manager.py:499} INFO - Created Permission View: %s
+[2025-12-30T18:15:14.837+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:15:14.837+0000] {manager.py:499} INFO - Created Permission View: %s
+[2025-12-30T18:15:14.851+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:15:14.850+0000] {manager.py:499} INFO - Created Permission View: %s
+[2025-12-30T18:15:14.852+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:15:14.851+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T18:15:14.864+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:15:14.864+0000] {dag.py:2963} INFO - Creating ORM DAG for taxi_api_simulation
+[2025-12-30T18:15:14.877+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:15:14.877+0000] {dag.py:3722} INFO - Setting next_dagrun for taxi_api_simulation to 2025-12-30T18:10:14.877378+00:00, run_after=2025-12-30T18:15:14.877378+00:00
+[2025-12-30T18:15:14.906+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/taxi_api_simulation_dag.py took 3.712 seconds
+[2025-12-30T18:15:45.255+0000] {processor.py:157} INFO - Started process (PID=223) to work on /opt/airflow/dags/taxi_api_simulation_dag.py
+[2025-12-30T18:15:45.257+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/taxi_api_simulation_dag.py for tasks to queue
+[2025-12-30T18:15:45.258+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:15:45.257+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/taxi_api_simulation_dag.py
+[2025-12-30T18:15:45.642+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_api_simulation']) retrieved from /opt/airflow/dags/taxi_api_simulation_dag.py
+[2025-12-30T18:15:45.670+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:15:45.669+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T18:15:45.700+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:15:45.700+0000] {dag.py:3722} INFO - Setting next_dagrun for taxi_api_simulation to 2025-12-30T18:15:14.877378+00:00, run_after=2025-12-30T18:20:14.877378+00:00
+[2025-12-30T18:15:45.726+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/taxi_api_simulation_dag.py took 0.477 seconds
+[2025-12-30T18:16:16.109+0000] {processor.py:157} INFO - Started process (PID=247) to work on /opt/airflow/dags/taxi_api_simulation_dag.py
+[2025-12-30T18:16:16.111+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/taxi_api_simulation_dag.py for tasks to queue
+[2025-12-30T18:16:16.112+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:16:16.112+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/taxi_api_simulation_dag.py
+[2025-12-30T18:16:16.597+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_api_simulation']) retrieved from /opt/airflow/dags/taxi_api_simulation_dag.py
+[2025-12-30T18:16:16.628+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:16:16.627+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T18:16:16.654+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:16:16.653+0000] {dag.py:3722} INFO - Setting next_dagrun for taxi_api_simulation to 2025-12-30T18:15:14.877378+00:00, run_after=2025-12-30T18:20:14.877378+00:00
+[2025-12-30T18:16:16.677+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/taxi_api_simulation_dag.py took 0.579 seconds
+[2025-12-30T18:16:46.981+0000] {processor.py:157} INFO - Started process (PID=270) to work on /opt/airflow/dags/taxi_api_simulation_dag.py
+[2025-12-30T18:16:46.987+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/taxi_api_simulation_dag.py for tasks to queue
+[2025-12-30T18:16:46.988+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:16:46.988+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/taxi_api_simulation_dag.py
+[2025-12-30T18:16:47.310+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_api_simulation']) retrieved from /opt/airflow/dags/taxi_api_simulation_dag.py
+[2025-12-30T18:16:47.342+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:16:47.341+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T18:16:47.365+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:16:47.364+0000] {dag.py:3722} INFO - Setting next_dagrun for taxi_api_simulation to 2025-12-30T18:15:14.877378+00:00, run_after=2025-12-30T18:20:14.877378+00:00
+[2025-12-30T18:16:47.398+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/taxi_api_simulation_dag.py took 0.421 seconds
+[2025-12-30T18:17:17.707+0000] {processor.py:157} INFO - Started process (PID=290) to work on /opt/airflow/dags/taxi_api_simulation_dag.py
+[2025-12-30T18:17:17.709+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/taxi_api_simulation_dag.py for tasks to queue
+[2025-12-30T18:17:17.710+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:17:17.709+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/taxi_api_simulation_dag.py
+[2025-12-30T18:17:18.034+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_api_simulation']) retrieved from /opt/airflow/dags/taxi_api_simulation_dag.py
+[2025-12-30T18:17:18.066+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:17:18.065+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T18:17:18.094+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:17:18.094+0000] {dag.py:3722} INFO - Setting next_dagrun for taxi_api_simulation to 2025-12-30T18:15:14.877378+00:00, run_after=2025-12-30T18:20:14.877378+00:00
+[2025-12-30T18:17:18.123+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/taxi_api_simulation_dag.py took 0.420 seconds
+[2025-12-30T18:17:48.490+0000] {processor.py:157} INFO - Started process (PID=309) to work on /opt/airflow/dags/taxi_api_simulation_dag.py
+[2025-12-30T18:17:48.492+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/taxi_api_simulation_dag.py for tasks to queue
+[2025-12-30T18:17:48.493+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:17:48.492+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/taxi_api_simulation_dag.py
+[2025-12-30T18:17:49.004+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_api_simulation']) retrieved from /opt/airflow/dags/taxi_api_simulation_dag.py
+[2025-12-30T18:17:49.043+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:17:49.042+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T18:17:49.099+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:17:49.099+0000] {dag.py:3722} INFO - Setting next_dagrun for taxi_api_simulation to 2025-12-30T18:15:14.877378+00:00, run_after=2025-12-30T18:20:14.877378+00:00
+[2025-12-30T18:17:49.155+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/taxi_api_simulation_dag.py took 0.669 seconds
+[2025-12-30T18:18:19.553+0000] {processor.py:157} INFO - Started process (PID=328) to work on /opt/airflow/dags/taxi_api_simulation_dag.py
+[2025-12-30T18:18:19.555+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/taxi_api_simulation_dag.py for tasks to queue
+[2025-12-30T18:18:19.556+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:18:19.556+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/taxi_api_simulation_dag.py
+[2025-12-30T18:18:20.239+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_api_simulation']) retrieved from /opt/airflow/dags/taxi_api_simulation_dag.py
+[2025-12-30T18:18:20.290+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:18:20.290+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T18:18:20.329+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:18:20.328+0000] {dag.py:3722} INFO - Setting next_dagrun for taxi_api_simulation to 2025-12-30T18:15:14.877378+00:00, run_after=2025-12-30T18:20:14.877378+00:00
+[2025-12-30T18:18:20.361+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/taxi_api_simulation_dag.py took 0.814 seconds
+[2025-12-30T18:18:50.707+0000] {processor.py:157} INFO - Started process (PID=348) to work on /opt/airflow/dags/taxi_api_simulation_dag.py
+[2025-12-30T18:18:50.709+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/taxi_api_simulation_dag.py for tasks to queue
+[2025-12-30T18:18:50.710+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:18:50.709+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/taxi_api_simulation_dag.py
+[2025-12-30T18:18:51.034+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_api_simulation']) retrieved from /opt/airflow/dags/taxi_api_simulation_dag.py
+[2025-12-30T18:18:51.069+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:18:51.069+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T18:18:51.102+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:18:51.102+0000] {dag.py:3722} INFO - Setting next_dagrun for taxi_api_simulation to 2025-12-30T18:15:14.877378+00:00, run_after=2025-12-30T18:20:14.877378+00:00
+[2025-12-30T18:18:51.136+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/taxi_api_simulation_dag.py took 0.433 seconds
+[2025-12-30T18:19:21.542+0000] {processor.py:157} INFO - Started process (PID=367) to work on /opt/airflow/dags/taxi_api_simulation_dag.py
+[2025-12-30T18:19:21.544+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/taxi_api_simulation_dag.py for tasks to queue
+[2025-12-30T18:19:21.545+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:19:21.545+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/taxi_api_simulation_dag.py
+[2025-12-30T18:19:21.863+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_api_simulation']) retrieved from /opt/airflow/dags/taxi_api_simulation_dag.py
+[2025-12-30T18:19:21.893+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:19:21.892+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T18:19:21.918+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:19:21.918+0000] {dag.py:3722} INFO - Setting next_dagrun for taxi_api_simulation to 2025-12-30T18:15:14.877378+00:00, run_after=2025-12-30T18:20:14.877378+00:00
+[2025-12-30T18:19:21.938+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/taxi_api_simulation_dag.py took 0.401 seconds
+[2025-12-30T18:19:52.280+0000] {processor.py:157} INFO - Started process (PID=386) to work on /opt/airflow/dags/taxi_api_simulation_dag.py
+[2025-12-30T18:19:52.281+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/taxi_api_simulation_dag.py for tasks to queue
+[2025-12-30T18:19:52.282+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:19:52.281+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/taxi_api_simulation_dag.py
+[2025-12-30T18:19:52.814+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_api_simulation']) retrieved from /opt/airflow/dags/taxi_api_simulation_dag.py
+[2025-12-30T18:19:52.846+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:19:52.846+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T18:19:52.875+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:19:52.874+0000] {dag.py:3722} INFO - Setting next_dagrun for taxi_api_simulation to 2025-12-30T18:15:14.877378+00:00, run_after=2025-12-30T18:20:14.877378+00:00
+[2025-12-30T18:19:52.899+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/taxi_api_simulation_dag.py took 0.624 seconds
+[2025-12-30T18:20:23.278+0000] {processor.py:157} INFO - Started process (PID=412) to work on /opt/airflow/dags/taxi_api_simulation_dag.py
+[2025-12-30T18:20:23.279+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/taxi_api_simulation_dag.py for tasks to queue
+[2025-12-30T18:20:23.280+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:20:23.280+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/taxi_api_simulation_dag.py
+[2025-12-30T18:20:23.580+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_api_simulation']) retrieved from /opt/airflow/dags/taxi_api_simulation_dag.py
+[2025-12-30T18:20:23.612+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:20:23.611+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T18:20:23.633+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:20:23.633+0000] {dag.py:3722} INFO - Setting next_dagrun for taxi_api_simulation to 2025-12-30T18:20:14.877378+00:00, run_after=2025-12-30T18:25:14.877378+00:00
+[2025-12-30T18:20:23.655+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/taxi_api_simulation_dag.py took 0.380 seconds
+[2025-12-30T18:20:53.954+0000] {processor.py:157} INFO - Started process (PID=431) to work on /opt/airflow/dags/taxi_api_simulation_dag.py
+[2025-12-30T18:20:53.955+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/taxi_api_simulation_dag.py for tasks to queue
+[2025-12-30T18:20:53.956+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:20:53.956+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/taxi_api_simulation_dag.py
+[2025-12-30T18:20:54.280+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_api_simulation']) retrieved from /opt/airflow/dags/taxi_api_simulation_dag.py
+[2025-12-30T18:20:54.309+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:20:54.308+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T18:20:54.338+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:20:54.338+0000] {dag.py:3722} INFO - Setting next_dagrun for taxi_api_simulation to 2025-12-30T18:20:14.877378+00:00, run_after=2025-12-30T18:25:14.877378+00:00
+[2025-12-30T18:20:54.366+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/taxi_api_simulation_dag.py took 0.417 seconds
+[2025-12-30T18:21:24.708+0000] {processor.py:157} INFO - Started process (PID=454) to work on /opt/airflow/dags/taxi_api_simulation_dag.py
+[2025-12-30T18:21:24.709+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/taxi_api_simulation_dag.py for tasks to queue
+[2025-12-30T18:21:24.710+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:21:24.710+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/taxi_api_simulation_dag.py
+[2025-12-30T18:21:25.057+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_api_simulation']) retrieved from /opt/airflow/dags/taxi_api_simulation_dag.py
+[2025-12-30T18:21:25.083+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:21:25.082+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T18:21:25.107+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:21:25.107+0000] {dag.py:3722} INFO - Setting next_dagrun for taxi_api_simulation to 2025-12-30T18:20:14.877378+00:00, run_after=2025-12-30T18:25:14.877378+00:00
+[2025-12-30T18:21:25.130+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/taxi_api_simulation_dag.py took 0.429 seconds

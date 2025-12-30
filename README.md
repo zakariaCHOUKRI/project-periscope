@@ -130,11 +130,19 @@ python batch_processor.py
 
 ### Step 4: Start All Infrastructure
 
+First, create a `.env` file to set the Airflow user ID (required for proper permissions):
+
+```bash
+echo "AIRFLOW_UID=$(id -u)" > .env
+```
+
+Then start all services:
+
 ```bash
 docker-compose up -d
 ```
 
-Wait about 60 seconds for all services to initialize.
+Wait about 60-90 seconds for all services to initialize (Airflow needs extra time for database migration and pip installs).
 
 ### Step 5: Verify Services are Running
 

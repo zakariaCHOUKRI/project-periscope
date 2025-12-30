@@ -123,16 +123,21 @@ services:
   airflow:
     image: apache/airflow:2.7.3-python3.10
     container_name: airflow
+    user: "${AIRFLOW_UID:-50000}:0"
     depends_on:
       kafka:
         condition: service_healthy
+      postgres:
+        condition: service_healthy
     environment:
+      - AIRFLOW_UID=${AIRFLOW_UID:-50000}
       - AIRFLOW__CORE__EXECUTOR=LocalExecutor
-      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=sqlite:////opt/airflow/airflow.db
-      - AIRFLOW__CORE__FERNET_KEY=your-fernet-key-here-must-be-32-bytes
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://hive:hive@postgres:5432/metastore
+      - AIRFLOW__CORE__FERNET_KEY=zTvhDXpVD-BgOyAKT9GDAePJ0I6TEg3bHkBIBDYpSxI=
       - AIRFLOW__CORE__LOAD_EXAMPLES=False
-      - AIRFLOW__WEBSERVER__SECRET_KEY=your-secret-key
-      - _PIP_ADDITIONAL_REQUIREMENTS=kafka-python pandas pyarrow fastavro
+      - AIRFLOW__WEBSERVER__SECRET_KEY=supersecretkey123456789
+      - AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION=False
+      - _PIP_ADDITIONAL_REQUIREMENTS=kafka-python pandas pyarrow fastavro psycopg2-binary
     volumes:
       - ./airflow/dags:/opt/airflow/dags
       - ./airflow/logs:/opt/airflow/logs
@@ -143,10 +148,12 @@ services:
       - "8081:8080"
     command: >
       bash -c "
-        airflow db init &&
+        mkdir -p /opt/airflow/logs/scheduler /opt/airflow/logs/dag_processor &&
+        airflow db migrate &&
         airflow users create --username admin --password admin --firstname Admin --lastname User --role Admin --email admin@example.com || true &&
         airflow webserver -p 8080 &
-        airflow scheduler
+        sleep 5 &&
+        exec airflow scheduler
       "
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8080/health"]

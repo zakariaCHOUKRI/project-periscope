@@ -1,0 +1,124 @@
+[2025-12-30T18:15:10.802+0000] {manager.py:487} INFO - Processing files using up to 2 processes at a time 
+[2025-12-30T18:15:10.803+0000] {manager.py:488} INFO - Process each file at most once every 30 seconds
+[2025-12-30T18:15:10.803+0000] {manager.py:489} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2025-12-30T18:15:10.803+0000] {manager.py:755} INFO - Searching for files in /opt/airflow/dags
+[2025-12-30T18:15:10.808+0000] {manager.py:758} INFO - There are 2 files in /opt/airflow/dags
+[2025-12-30T18:15:11.316+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                         PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/taxi_batch_processing_dag.py    178  0.19s             0           0
+/opt/airflow/dags/taxi_api_simulation_dag.py      181  0.15s             0           0
+================================================================================
+[2025-12-30T18:15:42.207+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/taxi_batch_processing_dag.py                           1           0  3.81s           2025-12-30T18:15:14
+/opt/airflow/dags/taxi_api_simulation_dag.py                             1           0  3.77s           2025-12-30T18:15:14
+================================================================================
+[2025-12-30T18:16:12.547+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/taxi_batch_processing_dag.py                           1           0  0.52s           2025-12-30T18:15:45
+/opt/airflow/dags/taxi_api_simulation_dag.py                             1           0  0.50s           2025-12-30T18:15:45
+================================================================================
+[2025-12-30T18:16:42.922+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/taxi_batch_processing_dag.py                           1           0  0.63s           2025-12-30T18:16:16
+/opt/airflow/dags/taxi_api_simulation_dag.py                             1           0  0.62s           2025-12-30T18:16:16
+================================================================================
+[2025-12-30T18:17:13.211+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/taxi_batch_processing_dag.py                           1           0  0.46s           2025-12-30T18:16:47
+/opt/airflow/dags/taxi_api_simulation_dag.py                             1           0  0.45s           2025-12-30T18:16:47
+================================================================================
+[2025-12-30T18:17:43.425+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/taxi_batch_processing_dag.py                           1           0  0.47s           2025-12-30T18:17:18
+/opt/airflow/dags/taxi_api_simulation_dag.py                             1           0  0.45s           2025-12-30T18:17:18
+================================================================================
+[2025-12-30T18:18:14.489+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/taxi_batch_processing_dag.py                           1           0  0.79s           2025-12-30T18:17:49
+/opt/airflow/dags/taxi_api_simulation_dag.py                             1           0  0.73s           2025-12-30T18:17:49
+================================================================================
+[2025-12-30T18:18:44.650+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/taxi_batch_processing_dag.py                           1           0  0.86s           2025-12-30T18:18:20
+/opt/airflow/dags/taxi_api_simulation_dag.py                             1           0  0.84s           2025-12-30T18:18:20
+================================================================================
+[2025-12-30T18:19:15.475+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/taxi_batch_processing_dag.py                           1           0  0.52s           2025-12-30T18:18:51
+/opt/airflow/dags/taxi_api_simulation_dag.py                             1           0  0.47s           2025-12-30T18:18:51
+================================================================================
+[2025-12-30T18:19:46.204+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/taxi_batch_processing_dag.py                           1           0  0.44s           2025-12-30T18:19:21
+/opt/airflow/dags/taxi_api_simulation_dag.py                             1           0  0.42s           2025-12-30T18:19:21
+================================================================================
+[2025-12-30T18:20:11.159+0000] {manager.py:755} INFO - Searching for files in /opt/airflow/dags
+[2025-12-30T18:20:11.163+0000] {manager.py:758} INFO - There are 2 files in /opt/airflow/dags
+[2025-12-30T18:20:16.577+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/taxi_batch_processing_dag.py                           1           0  0.66s           2025-12-30T18:19:52
+/opt/airflow/dags/taxi_api_simulation_dag.py                             1           0  0.65s           2025-12-30T18:19:52
+================================================================================
+[2025-12-30T18:20:46.878+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/taxi_batch_processing_dag.py                           1           0  0.43s           2025-12-30T18:20:23
+/opt/airflow/dags/taxi_api_simulation_dag.py                             1           0  0.40s           2025-12-30T18:20:23
+================================================================================
+[2025-12-30T18:21:17.208+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+----------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/taxi_batch_processing_dag.py                           1           0  0.45s           2025-12-30T18:20:54
+/opt/airflow/dags/taxi_api_simulation_dag.py                             1           0  0.44s           2025-12-30T18:20:54
+================================================================================
