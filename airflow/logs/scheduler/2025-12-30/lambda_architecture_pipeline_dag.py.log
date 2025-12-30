@@ -191,3 +191,220 @@
 [2025-12-30T18:46:51.767+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:46:51.767+0000] {dag.py:2941} INFO - Sync 1 DAGs
 [2025-12-30T18:46:51.794+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:46:51.793+0000] {dag.py:3722} INFO - Setting next_dagrun for lambda_architecture_pipeline to 2025-12-30T00:00:00+00:00, run_after=2025-12-31T00:00:00+00:00
 [2025-12-30T18:46:51.818+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/lambda_architecture_pipeline_dag.py took 0.386 seconds
+[2025-12-30T18:47:22.218+0000] {processor.py:157} INFO - Started process (PID=762) to work on /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:47:22.220+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/lambda_architecture_pipeline_dag.py for tasks to queue
+[2025-12-30T18:47:22.221+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:47:22.220+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:47:22.509+0000] {processor.py:839} INFO - DAG(s) dict_keys(['lambda_architecture_pipeline']) retrieved from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:47:22.539+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:47:22.538+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T18:47:22.561+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:47:22.561+0000] {dag.py:3722} INFO - Setting next_dagrun for lambda_architecture_pipeline to 2025-12-30T00:00:00+00:00, run_after=2025-12-31T00:00:00+00:00
+[2025-12-30T18:47:22.584+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/lambda_architecture_pipeline_dag.py took 0.370 seconds
+[2025-12-30T18:47:53.249+0000] {processor.py:157} INFO - Started process (PID=792) to work on /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:47:53.254+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/lambda_architecture_pipeline_dag.py for tasks to queue
+[2025-12-30T18:47:53.255+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:47:53.254+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:47:53.761+0000] {processor.py:839} INFO - DAG(s) dict_keys(['lambda_architecture_pipeline']) retrieved from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:47:53.793+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:47:53.793+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T18:47:53.821+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:47:53.821+0000] {dag.py:3722} INFO - Setting next_dagrun for lambda_architecture_pipeline to 2025-12-30T00:00:00+00:00, run_after=2025-12-31T00:00:00+00:00
+[2025-12-30T18:47:53.850+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/lambda_architecture_pipeline_dag.py took 0.605 seconds
+[2025-12-30T18:48:24.855+0000] {processor.py:157} INFO - Started process (PID=822) to work on /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:48:24.857+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/lambda_architecture_pipeline_dag.py for tasks to queue
+[2025-12-30T18:48:24.857+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:48:24.857+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:48:25.301+0000] {processor.py:839} INFO - DAG(s) dict_keys(['lambda_architecture_pipeline']) retrieved from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:48:25.328+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:48:25.327+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T18:48:25.348+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:48:25.348+0000] {dag.py:3722} INFO - Setting next_dagrun for lambda_architecture_pipeline to 2025-12-30T00:00:00+00:00, run_after=2025-12-31T00:00:00+00:00
+[2025-12-30T18:48:25.370+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/lambda_architecture_pipeline_dag.py took 0.519 seconds
+[2025-12-30T18:48:56.153+0000] {processor.py:157} INFO - Started process (PID=852) to work on /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:48:56.155+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/lambda_architecture_pipeline_dag.py for tasks to queue
+[2025-12-30T18:48:56.156+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:48:56.155+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:48:56.607+0000] {processor.py:839} INFO - DAG(s) dict_keys(['lambda_architecture_pipeline']) retrieved from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:48:56.635+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:48:56.634+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T18:48:56.656+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:48:56.656+0000] {dag.py:3722} INFO - Setting next_dagrun for lambda_architecture_pipeline to 2025-12-30T00:00:00+00:00, run_after=2025-12-31T00:00:00+00:00
+[2025-12-30T18:48:56.679+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/lambda_architecture_pipeline_dag.py took 0.530 seconds
+[2025-12-30T18:49:27.530+0000] {processor.py:157} INFO - Started process (PID=882) to work on /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:49:27.532+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/lambda_architecture_pipeline_dag.py for tasks to queue
+[2025-12-30T18:49:27.533+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:49:27.532+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:49:28.057+0000] {processor.py:839} INFO - DAG(s) dict_keys(['lambda_architecture_pipeline']) retrieved from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:49:28.089+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:49:28.089+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T18:49:28.114+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:49:28.113+0000] {dag.py:3722} INFO - Setting next_dagrun for lambda_architecture_pipeline to 2025-12-30T00:00:00+00:00, run_after=2025-12-31T00:00:00+00:00
+[2025-12-30T18:49:28.136+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/lambda_architecture_pipeline_dag.py took 0.611 seconds
+[2025-12-30T18:49:58.956+0000] {processor.py:157} INFO - Started process (PID=912) to work on /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:49:58.960+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/lambda_architecture_pipeline_dag.py for tasks to queue
+[2025-12-30T18:49:58.961+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:49:58.960+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:49:59.379+0000] {processor.py:839} INFO - DAG(s) dict_keys(['lambda_architecture_pipeline']) retrieved from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:49:59.407+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:49:59.407+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T18:49:59.429+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:49:59.429+0000] {dag.py:3722} INFO - Setting next_dagrun for lambda_architecture_pipeline to 2025-12-30T00:00:00+00:00, run_after=2025-12-31T00:00:00+00:00
+[2025-12-30T18:49:59.451+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/lambda_architecture_pipeline_dag.py took 0.498 seconds
+[2025-12-30T18:50:30.225+0000] {processor.py:157} INFO - Started process (PID=968) to work on /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:50:30.226+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/lambda_architecture_pipeline_dag.py for tasks to queue
+[2025-12-30T18:50:30.227+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:50:30.226+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:50:30.644+0000] {processor.py:839} INFO - DAG(s) dict_keys(['lambda_architecture_pipeline']) retrieved from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:50:30.678+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:50:30.678+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T18:50:30.700+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:50:30.700+0000] {dag.py:3722} INFO - Setting next_dagrun for lambda_architecture_pipeline to 2025-12-30T00:00:00+00:00, run_after=2025-12-31T00:00:00+00:00
+[2025-12-30T18:50:30.721+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/lambda_architecture_pipeline_dag.py took 0.501 seconds
+[2025-12-30T18:51:01.543+0000] {processor.py:157} INFO - Started process (PID=998) to work on /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:51:01.545+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/lambda_architecture_pipeline_dag.py for tasks to queue
+[2025-12-30T18:51:01.546+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:51:01.545+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:51:02.032+0000] {processor.py:839} INFO - DAG(s) dict_keys(['lambda_architecture_pipeline']) retrieved from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:51:02.061+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:51:02.060+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T18:51:02.082+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:51:02.082+0000] {dag.py:3722} INFO - Setting next_dagrun for lambda_architecture_pipeline to 2025-12-30T00:00:00+00:00, run_after=2025-12-31T00:00:00+00:00
+[2025-12-30T18:51:02.102+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/lambda_architecture_pipeline_dag.py took 0.564 seconds
+[2025-12-30T18:51:32.897+0000] {processor.py:157} INFO - Started process (PID=1032) to work on /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:51:32.898+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/lambda_architecture_pipeline_dag.py for tasks to queue
+[2025-12-30T18:51:32.900+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:51:32.899+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:51:33.476+0000] {processor.py:839} INFO - DAG(s) dict_keys(['lambda_architecture_pipeline']) retrieved from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:51:33.523+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:51:33.522+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T18:51:33.565+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:51:33.565+0000] {dag.py:3722} INFO - Setting next_dagrun for lambda_architecture_pipeline to 2025-12-30T00:00:00+00:00, run_after=2025-12-31T00:00:00+00:00
+[2025-12-30T18:51:33.602+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/lambda_architecture_pipeline_dag.py took 0.709 seconds
+[2025-12-30T18:52:03.672+0000] {processor.py:157} INFO - Started process (PID=1062) to work on /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:52:03.676+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/lambda_architecture_pipeline_dag.py for tasks to queue
+[2025-12-30T18:52:03.677+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:52:03.676+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:52:04.138+0000] {processor.py:839} INFO - DAG(s) dict_keys(['lambda_architecture_pipeline']) retrieved from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:52:04.168+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:52:04.167+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T18:52:04.192+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:52:04.192+0000] {dag.py:3722} INFO - Setting next_dagrun for lambda_architecture_pipeline to 2025-12-30T00:00:00+00:00, run_after=2025-12-31T00:00:00+00:00
+[2025-12-30T18:52:04.218+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/lambda_architecture_pipeline_dag.py took 0.551 seconds
+[2025-12-30T18:52:35.070+0000] {processor.py:157} INFO - Started process (PID=1092) to work on /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:52:35.071+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/lambda_architecture_pipeline_dag.py for tasks to queue
+[2025-12-30T18:52:35.073+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:52:35.072+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:52:35.949+0000] {processor.py:839} INFO - DAG(s) dict_keys(['lambda_architecture_pipeline']) retrieved from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:52:36.025+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:52:36.024+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T18:52:36.081+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:52:36.081+0000] {dag.py:3722} INFO - Setting next_dagrun for lambda_architecture_pipeline to 2025-12-30T00:00:00+00:00, run_after=2025-12-31T00:00:00+00:00
+[2025-12-30T18:52:36.121+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/lambda_architecture_pipeline_dag.py took 1.057 seconds
+[2025-12-30T18:53:06.673+0000] {processor.py:157} INFO - Started process (PID=1121) to work on /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:53:06.677+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/lambda_architecture_pipeline_dag.py for tasks to queue
+[2025-12-30T18:53:06.678+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:53:06.677+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:53:06.945+0000] {processor.py:839} INFO - DAG(s) dict_keys(['lambda_architecture_pipeline']) retrieved from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:53:06.977+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:53:06.977+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T18:53:07.002+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:53:07.002+0000] {dag.py:3722} INFO - Setting next_dagrun for lambda_architecture_pipeline to 2025-12-30T00:00:00+00:00, run_after=2025-12-31T00:00:00+00:00
+[2025-12-30T18:53:07.024+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/lambda_architecture_pipeline_dag.py took 0.355 seconds
+[2025-12-30T18:53:37.377+0000] {processor.py:157} INFO - Started process (PID=1151) to work on /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:53:37.378+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/lambda_architecture_pipeline_dag.py for tasks to queue
+[2025-12-30T18:53:37.379+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:53:37.379+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:53:37.729+0000] {processor.py:839} INFO - DAG(s) dict_keys(['lambda_architecture_pipeline']) retrieved from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:53:37.763+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:53:37.762+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T18:53:37.788+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:53:37.788+0000] {dag.py:3722} INFO - Setting next_dagrun for lambda_architecture_pipeline to 2025-12-30T00:00:00+00:00, run_after=2025-12-31T00:00:00+00:00
+[2025-12-30T18:53:37.870+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/lambda_architecture_pipeline_dag.py took 0.498 seconds
+[2025-12-30T18:54:08.688+0000] {processor.py:157} INFO - Started process (PID=1181) to work on /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:54:08.689+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/lambda_architecture_pipeline_dag.py for tasks to queue
+[2025-12-30T18:54:08.690+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:54:08.690+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:54:09.015+0000] {processor.py:839} INFO - DAG(s) dict_keys(['lambda_architecture_pipeline']) retrieved from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:54:09.045+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:54:09.045+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T18:54:09.066+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:54:09.065+0000] {dag.py:3722} INFO - Setting next_dagrun for lambda_architecture_pipeline to 2025-12-30T00:00:00+00:00, run_after=2025-12-31T00:00:00+00:00
+[2025-12-30T18:54:09.086+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/lambda_architecture_pipeline_dag.py took 0.402 seconds
+[2025-12-30T18:54:39.774+0000] {processor.py:157} INFO - Started process (PID=1211) to work on /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:54:39.784+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/lambda_architecture_pipeline_dag.py for tasks to queue
+[2025-12-30T18:54:39.785+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:54:39.785+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:54:40.079+0000] {processor.py:839} INFO - DAG(s) dict_keys(['lambda_architecture_pipeline']) retrieved from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:54:40.115+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:54:40.115+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T18:54:40.144+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:54:40.144+0000] {dag.py:3722} INFO - Setting next_dagrun for lambda_architecture_pipeline to 2025-12-30T00:00:00+00:00, run_after=2025-12-31T00:00:00+00:00
+[2025-12-30T18:54:40.167+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/lambda_architecture_pipeline_dag.py took 0.397 seconds
+[2025-12-30T18:55:10.522+0000] {processor.py:157} INFO - Started process (PID=1255) to work on /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:55:10.524+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/lambda_architecture_pipeline_dag.py for tasks to queue
+[2025-12-30T18:55:10.525+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:55:10.524+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:55:10.870+0000] {processor.py:839} INFO - DAG(s) dict_keys(['lambda_architecture_pipeline']) retrieved from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:55:10.924+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:55:10.924+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T18:55:10.972+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:55:10.971+0000] {dag.py:3722} INFO - Setting next_dagrun for lambda_architecture_pipeline to 2025-12-30T00:00:00+00:00, run_after=2025-12-31T00:00:00+00:00
+[2025-12-30T18:55:11.004+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/lambda_architecture_pipeline_dag.py took 0.488 seconds
+[2025-12-30T18:55:41.751+0000] {processor.py:157} INFO - Started process (PID=1297) to work on /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:55:41.755+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/lambda_architecture_pipeline_dag.py for tasks to queue
+[2025-12-30T18:55:41.756+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:55:41.756+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:55:42.089+0000] {processor.py:839} INFO - DAG(s) dict_keys(['lambda_architecture_pipeline']) retrieved from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:55:42.120+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:55:42.119+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T18:55:42.141+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:55:42.141+0000] {dag.py:3722} INFO - Setting next_dagrun for lambda_architecture_pipeline to 2025-12-30T00:00:00+00:00, run_after=2025-12-31T00:00:00+00:00
+[2025-12-30T18:55:42.161+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/lambda_architecture_pipeline_dag.py took 0.414 seconds
+[2025-12-30T18:56:12.521+0000] {processor.py:157} INFO - Started process (PID=1327) to work on /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:56:12.523+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/lambda_architecture_pipeline_dag.py for tasks to queue
+[2025-12-30T18:56:12.524+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:56:12.524+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:56:12.804+0000] {processor.py:839} INFO - DAG(s) dict_keys(['lambda_architecture_pipeline']) retrieved from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:56:12.835+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:56:12.835+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T18:56:13.013+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:56:13.013+0000] {dag.py:3722} INFO - Setting next_dagrun for lambda_architecture_pipeline to 2025-12-30T00:00:00+00:00, run_after=2025-12-31T00:00:00+00:00
+[2025-12-30T18:56:13.037+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/lambda_architecture_pipeline_dag.py took 0.520 seconds
+[2025-12-30T18:56:43.471+0000] {processor.py:157} INFO - Started process (PID=1361) to work on /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:56:43.473+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/lambda_architecture_pipeline_dag.py for tasks to queue
+[2025-12-30T18:56:43.475+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:56:43.474+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:56:43.898+0000] {processor.py:839} INFO - DAG(s) dict_keys(['lambda_architecture_pipeline']) retrieved from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:56:43.926+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:56:43.925+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T18:56:43.946+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:56:43.946+0000] {dag.py:3722} INFO - Setting next_dagrun for lambda_architecture_pipeline to 2025-12-30T00:00:00+00:00, run_after=2025-12-31T00:00:00+00:00
+[2025-12-30T18:56:43.966+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/lambda_architecture_pipeline_dag.py took 0.498 seconds
+[2025-12-30T18:57:14.777+0000] {processor.py:157} INFO - Started process (PID=1391) to work on /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:57:14.779+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/lambda_architecture_pipeline_dag.py for tasks to queue
+[2025-12-30T18:57:14.779+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:57:14.779+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:57:15.154+0000] {processor.py:839} INFO - DAG(s) dict_keys(['lambda_architecture_pipeline']) retrieved from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:57:15.181+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:57:15.180+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T18:57:15.201+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:57:15.201+0000] {dag.py:3722} INFO - Setting next_dagrun for lambda_architecture_pipeline to 2025-12-30T00:00:00+00:00, run_after=2025-12-31T00:00:00+00:00
+[2025-12-30T18:57:15.221+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/lambda_architecture_pipeline_dag.py took 0.448 seconds
+[2025-12-30T18:57:45.993+0000] {processor.py:157} INFO - Started process (PID=1421) to work on /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:57:45.995+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/lambda_architecture_pipeline_dag.py for tasks to queue
+[2025-12-30T18:57:45.995+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:57:45.995+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:57:46.478+0000] {processor.py:839} INFO - DAG(s) dict_keys(['lambda_architecture_pipeline']) retrieved from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:57:46.523+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:57:46.523+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T18:57:46.561+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:57:46.560+0000] {dag.py:3722} INFO - Setting next_dagrun for lambda_architecture_pipeline to 2025-12-30T00:00:00+00:00, run_after=2025-12-31T00:00:00+00:00
+[2025-12-30T18:57:46.589+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/lambda_architecture_pipeline_dag.py took 0.601 seconds
+[2025-12-30T18:58:17.397+0000] {processor.py:157} INFO - Started process (PID=1451) to work on /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:58:17.398+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/lambda_architecture_pipeline_dag.py for tasks to queue
+[2025-12-30T18:58:17.400+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:58:17.400+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:58:18.328+0000] {processor.py:839} INFO - DAG(s) dict_keys(['lambda_architecture_pipeline']) retrieved from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:58:18.383+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:58:18.382+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T18:58:18.430+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:58:18.429+0000] {dag.py:3722} INFO - Setting next_dagrun for lambda_architecture_pipeline to 2025-12-30T00:00:00+00:00, run_after=2025-12-31T00:00:00+00:00
+[2025-12-30T18:58:18.465+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/lambda_architecture_pipeline_dag.py took 1.074 seconds
+[2025-12-30T18:58:49.360+0000] {processor.py:157} INFO - Started process (PID=1489) to work on /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:58:49.361+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/lambda_architecture_pipeline_dag.py for tasks to queue
+[2025-12-30T18:58:49.362+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:58:49.362+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:58:49.646+0000] {processor.py:839} INFO - DAG(s) dict_keys(['lambda_architecture_pipeline']) retrieved from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:58:49.681+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:58:49.680+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T18:58:49.705+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:58:49.705+0000] {dag.py:3722} INFO - Setting next_dagrun for lambda_architecture_pipeline to 2025-12-30T00:00:00+00:00, run_after=2025-12-31T00:00:00+00:00
+[2025-12-30T18:58:49.729+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/lambda_architecture_pipeline_dag.py took 0.372 seconds
+[2025-12-30T18:59:20.418+0000] {processor.py:157} INFO - Started process (PID=1519) to work on /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:59:20.420+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/lambda_architecture_pipeline_dag.py for tasks to queue
+[2025-12-30T18:59:20.421+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:59:20.421+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:59:20.918+0000] {processor.py:839} INFO - DAG(s) dict_keys(['lambda_architecture_pipeline']) retrieved from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:59:20.999+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:59:20.999+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T18:59:21.043+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:59:21.043+0000] {dag.py:3722} INFO - Setting next_dagrun for lambda_architecture_pipeline to 2025-12-30T00:00:00+00:00, run_after=2025-12-31T00:00:00+00:00
+[2025-12-30T18:59:21.081+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/lambda_architecture_pipeline_dag.py took 0.669 seconds
+[2025-12-30T18:59:51.816+0000] {processor.py:157} INFO - Started process (PID=1549) to work on /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:59:51.821+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/lambda_architecture_pipeline_dag.py for tasks to queue
+[2025-12-30T18:59:51.822+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:59:51.822+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:59:52.079+0000] {processor.py:839} INFO - DAG(s) dict_keys(['lambda_architecture_pipeline']) retrieved from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T18:59:52.109+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:59:52.109+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T18:59:52.131+0000] {logging_mixin.py:154} INFO - [2025-12-30T18:59:52.130+0000] {dag.py:3722} INFO - Setting next_dagrun for lambda_architecture_pipeline to 2025-12-30T00:00:00+00:00, run_after=2025-12-31T00:00:00+00:00
+[2025-12-30T18:59:52.153+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/lambda_architecture_pipeline_dag.py took 0.341 seconds
+[2025-12-30T19:00:22.627+0000] {processor.py:157} INFO - Started process (PID=1605) to work on /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T19:00:22.631+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/lambda_architecture_pipeline_dag.py for tasks to queue
+[2025-12-30T19:00:22.632+0000] {logging_mixin.py:154} INFO - [2025-12-30T19:00:22.632+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T19:00:23.060+0000] {processor.py:839} INFO - DAG(s) dict_keys(['lambda_architecture_pipeline']) retrieved from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T19:00:23.106+0000] {logging_mixin.py:154} INFO - [2025-12-30T19:00:23.105+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T19:00:23.147+0000] {logging_mixin.py:154} INFO - [2025-12-30T19:00:23.146+0000] {dag.py:3722} INFO - Setting next_dagrun for lambda_architecture_pipeline to 2025-12-30T00:00:00+00:00, run_after=2025-12-31T00:00:00+00:00
+[2025-12-30T19:00:23.193+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/lambda_architecture_pipeline_dag.py took 0.569 seconds
+[2025-12-30T19:00:53.855+0000] {processor.py:157} INFO - Started process (PID=1640) to work on /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T19:00:53.856+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/lambda_architecture_pipeline_dag.py for tasks to queue
+[2025-12-30T19:00:53.857+0000] {logging_mixin.py:154} INFO - [2025-12-30T19:00:53.856+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T19:00:54.152+0000] {processor.py:839} INFO - DAG(s) dict_keys(['lambda_architecture_pipeline']) retrieved from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T19:00:54.184+0000] {logging_mixin.py:154} INFO - [2025-12-30T19:00:54.184+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T19:00:54.209+0000] {logging_mixin.py:154} INFO - [2025-12-30T19:00:54.208+0000] {dag.py:3722} INFO - Setting next_dagrun for lambda_architecture_pipeline to 2025-12-30T00:00:00+00:00, run_after=2025-12-31T00:00:00+00:00
+[2025-12-30T19:00:54.234+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/lambda_architecture_pipeline_dag.py took 0.383 seconds
+[2025-12-30T19:01:24.575+0000] {processor.py:157} INFO - Started process (PID=1674) to work on /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T19:01:24.580+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/lambda_architecture_pipeline_dag.py for tasks to queue
+[2025-12-30T19:01:24.581+0000] {logging_mixin.py:154} INFO - [2025-12-30T19:01:24.581+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T19:01:24.862+0000] {processor.py:839} INFO - DAG(s) dict_keys(['lambda_architecture_pipeline']) retrieved from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T19:01:24.900+0000] {logging_mixin.py:154} INFO - [2025-12-30T19:01:24.899+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T19:01:24.927+0000] {logging_mixin.py:154} INFO - [2025-12-30T19:01:24.927+0000] {dag.py:3722} INFO - Setting next_dagrun for lambda_architecture_pipeline to 2025-12-30T00:00:00+00:00, run_after=2025-12-31T00:00:00+00:00
+[2025-12-30T19:01:24.952+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/lambda_architecture_pipeline_dag.py took 0.381 seconds
+[2025-12-30T19:01:55.292+0000] {processor.py:157} INFO - Started process (PID=1704) to work on /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T19:01:55.293+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/lambda_architecture_pipeline_dag.py for tasks to queue
+[2025-12-30T19:01:55.294+0000] {logging_mixin.py:154} INFO - [2025-12-30T19:01:55.294+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T19:01:55.744+0000] {processor.py:839} INFO - DAG(s) dict_keys(['lambda_architecture_pipeline']) retrieved from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T19:01:55.830+0000] {logging_mixin.py:154} INFO - [2025-12-30T19:01:55.830+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T19:01:55.863+0000] {logging_mixin.py:154} INFO - [2025-12-30T19:01:55.862+0000] {dag.py:3722} INFO - Setting next_dagrun for lambda_architecture_pipeline to 2025-12-30T00:00:00+00:00, run_after=2025-12-31T00:00:00+00:00
+[2025-12-30T19:01:55.904+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/lambda_architecture_pipeline_dag.py took 0.616 seconds
+[2025-12-30T19:02:25.967+0000] {processor.py:157} INFO - Started process (PID=1735) to work on /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T19:02:25.968+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/lambda_architecture_pipeline_dag.py for tasks to queue
+[2025-12-30T19:02:25.969+0000] {logging_mixin.py:154} INFO - [2025-12-30T19:02:25.968+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T19:02:26.216+0000] {processor.py:839} INFO - DAG(s) dict_keys(['lambda_architecture_pipeline']) retrieved from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T19:02:26.251+0000] {logging_mixin.py:154} INFO - [2025-12-30T19:02:26.250+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T19:02:26.273+0000] {logging_mixin.py:154} INFO - [2025-12-30T19:02:26.273+0000] {dag.py:3722} INFO - Setting next_dagrun for lambda_architecture_pipeline to 2025-12-30T00:00:00+00:00, run_after=2025-12-31T00:00:00+00:00
+[2025-12-30T19:02:26.295+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/lambda_architecture_pipeline_dag.py took 0.331 seconds
+[2025-12-30T19:02:57.050+0000] {processor.py:157} INFO - Started process (PID=1765) to work on /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T19:02:57.052+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/lambda_architecture_pipeline_dag.py for tasks to queue
+[2025-12-30T19:02:57.053+0000] {logging_mixin.py:154} INFO - [2025-12-30T19:02:57.053+0000] {dagbag.py:536} INFO - Filling up the DagBag from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T19:02:57.378+0000] {processor.py:839} INFO - DAG(s) dict_keys(['lambda_architecture_pipeline']) retrieved from /opt/airflow/dags/lambda_architecture_pipeline_dag.py
+[2025-12-30T19:02:57.417+0000] {logging_mixin.py:154} INFO - [2025-12-30T19:02:57.417+0000] {dag.py:2941} INFO - Sync 1 DAGs
+[2025-12-30T19:02:57.449+0000] {logging_mixin.py:154} INFO - [2025-12-30T19:02:57.449+0000] {dag.py:3722} INFO - Setting next_dagrun for lambda_architecture_pipeline to 2025-12-30T00:00:00+00:00, run_after=2025-12-31T00:00:00+00:00
+[2025-12-30T19:02:57.482+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/lambda_architecture_pipeline_dag.py took 0.436 seconds

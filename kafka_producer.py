@@ -78,7 +78,7 @@ def main():
     
     try:
         # Stream data (adjust num_records and delay as needed)
-        stream_data(producer, num_records=100, delay=0.3)
+        stream_data(producer, num_records=5000, delay=0.3)
     except KeyboardInterrupt:
         print("\nStopped by user")
     finally:

@@ -162,11 +162,17 @@ def display_speed_layer():
                 st.scatter_chart(chart_df, x='trip_duration', y='predicted_duration')
             
             with pred_col2:
-                # Prediction error distribution
-                st.markdown("**Prediction Error Distribution**")
+                # Model accuracy metrics
+                st.markdown("**Model Accuracy Metrics**")
                 if 'prediction_error' in df.columns:
                     error_df = df['prediction_error'].dropna()
-                    st.bar_chart(error_df.value_counts().head(20))
+                    within_1min = (error_df.abs() <= 60).sum() / len(error_df) * 100
+                    within_5min = (error_df.abs() <= 300).sum() / len(error_df) * 100
+                    accuracy_data = pd.DataFrame({
+                        'Threshold': ['Within 1 min', 'Within 5 min'],
+                        'Accuracy (%)': [within_1min, within_5min]
+                    })
+                    st.bar_chart(accuracy_data.set_index('Threshold'))
         
         st.markdown("---")
         
@@ -174,14 +180,22 @@ def display_speed_layer():
         chart_col1, chart_col2 = st.columns(2)
         
         with chart_col1:
-            st.subheader("📊 Trip Distance Distribution")
-            if 'distance_km' in df.columns:
-                st.bar_chart(df['distance_km'].value_counts().head(20))
+            st.subheader("⏰ Trips by Hour")
+            if 'hour' in df.columns:
+                hourly_counts = df['hour'].value_counts().sort_index()
+                st.bar_chart(hourly_counts)
         
         with chart_col2:
-            st.subheader("👥 Passenger Count")
-            if 'passenger_count' in df.columns:
-                st.bar_chart(df['passenger_count'].value_counts().sort_index())
+            st.subheader("🚗 Vendor Performance")
+            if 'vendor_id' in df.columns and 'trip_duration' in df.columns:
+                vendor_stats = df.groupby('vendor_id').agg({
+                    'trip_duration': 'mean',
+                    'distance_km': 'mean'
+                }).round(2)
+                vendor_stats.columns = ['Avg Duration (s)', 'Avg Distance (km)']
+                vendor_stats.index = vendor_stats.index.map({1: 'Vendor 1', 2: 'Vendor 2'})
+                st.dataframe(vendor_stats)
+                st.bar_chart(df['vendor_id'].value_counts().sort_index())
         
         # Map
         if all(col in df.columns for col in ['pickup_latitude', 'pickup_longitude']):

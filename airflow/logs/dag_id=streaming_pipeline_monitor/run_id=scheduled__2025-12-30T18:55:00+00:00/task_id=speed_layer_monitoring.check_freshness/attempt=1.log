@@ -1,0 +1,18 @@
+[2025-12-30T19:00:01.597+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: streaming_pipeline_monitor.speed_layer_monitoring.check_freshness scheduled__2025-12-30T18:55:00+00:00 [queued]>
+[2025-12-30T19:00:01.606+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: streaming_pipeline_monitor.speed_layer_monitoring.check_freshness scheduled__2025-12-30T18:55:00+00:00 [queued]>
+[2025-12-30T19:00:01.606+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2025-12-30T19:00:01.623+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): speed_layer_monitoring.check_freshness> on 2025-12-30 18:55:00+00:00
+[2025-12-30T19:00:01.628+0000] {standard_task_runner.py:57} INFO - Started process 1576 to run task
+[2025-12-30T19:00:01.632+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'streaming_pipeline_monitor', 'speed_layer_monitoring.check_freshness', 'scheduled__2025-12-30T18:55:00+00:00', '--job-id', '95', '--raw', '--subdir', 'DAGS_FOLDER/streaming_pipeline_monitor_dag.py', '--cfg-path', '/tmp/tmpn_mx4f3a']
+[2025-12-30T19:00:01.635+0000] {standard_task_runner.py:85} INFO - Job 95: Subtask speed_layer_monitoring.check_freshness
+[2025-12-30T19:00:01.703+0000] {task_command.py:416} INFO - Running <TaskInstance: streaming_pipeline_monitor.speed_layer_monitoring.check_freshness scheduled__2025-12-30T18:55:00+00:00 [running]> on host 7f437fd3c4aa
+[2025-12-30T19:00:01.810+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='streaming-alerts@example.com' AIRFLOW_CTX_DAG_OWNER='streaming-ops' AIRFLOW_CTX_DAG_ID='streaming_pipeline_monitor' AIRFLOW_CTX_TASK_ID='speed_layer_monitoring.check_freshness' AIRFLOW_CTX_EXECUTION_DATE='2025-12-30T18:55:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-12-30T18:55:00+00:00'
+[2025-12-30T19:00:01.816+0000] {logging_mixin.py:154} INFO - ✓ Speed layer freshness:
+[2025-12-30T19:00:01.816+0000] {logging_mixin.py:154} INFO -   - Files: 10
+[2025-12-30T19:00:01.816+0000] {logging_mixin.py:154} INFO -   - Latest: batch_00009.json
+[2025-12-30T19:00:01.816+0000] {logging_mixin.py:154} INFO -   - Age: 0.0 minutes
+[2025-12-30T19:00:01.817+0000] {logging_mixin.py:154} INFO -   - Fresh: True
+[2025-12-30T19:00:01.831+0000] {python.py:194} INFO - Done. Returned value was: {'timestamp': '2025-12-30T19:00:01.814151', 'speed_layer_path': '/opt/airflow/data/speed_layer', 'file_count': 10, 'latest_file': 'batch_00009.json', 'latest_timestamp': '2025-12-30T19:00:00.548786', 'age_minutes': 0.02112263043721517, 'is_fresh': True}
+[2025-12-30T19:00:01.854+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=streaming_pipeline_monitor, task_id=speed_layer_monitoring.check_freshness, execution_date=20251230T185500, start_date=20251230T190001, end_date=20251230T190001
+[2025-12-30T19:00:01.886+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-12-30T19:00:01.916+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check
